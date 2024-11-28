@@ -12,7 +12,7 @@ Relationships:
 ## Stored Procedures
 #### GetMaxQuantity()
  Fetch the maximum capacity of rooms for a given room type.
- '''sql 
+ ```sql
  DELIMITER //
 
 CREATE PROCEDURE GetMaxQuantity(IN room_type VARCHAR(50))
@@ -23,4 +23,4 @@ BEGIN
 END //
 
 DELIMITER ;
-'''
+```
