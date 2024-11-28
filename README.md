@@ -7,3 +7,18 @@ The system's Entity-Relationship (ER) diagram illustrates the relationships betw
 Relationships:
 * Customers → Bookings: One-to-Many
 * Rooms → Bookings: One-to-Many
+![ER Diagram](https://github.com/user-attachments/assets/a30eedf2-1366-4867-90c4-4cdf93f4f33b)
+
+## Stored Procedures
+#### GetMaxQuantity()
+ Fetch the maximum capacity of rooms for a given room type.
+ DELIMITER //
+
+CREATE PROCEDURE GetMaxQuantity(IN room_type VARCHAR(50))
+BEGIN
+    SELECT MAX(max_capacity) AS max_quantity
+    FROM rooms
+    WHERE room_type = room_type;
+END //
+
+DELIMITER ;
