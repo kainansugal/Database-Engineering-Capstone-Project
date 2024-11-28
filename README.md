@@ -81,5 +81,12 @@ DELIMITER ;
 
 ```
 ## Tableau Charts
+Map Chart
+![Map Chart](https://github.com/user-attachments/assets/fcde00d4-85f4-4ea3-9cab-62eccb544f85)
+Bubble Chart
+![Bubble Chart](https://github.com/user-attachments/assets/8091e99d-cbc4-498d-8cc1-5b6d02bef6dc)
+Line Chart
+![Line Chart](https://github.com/user-attachments/assets/ad6e02ce-3c93-4cb0-909b-6904f2b57334)
+
 
 
