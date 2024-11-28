@@ -11,7 +11,6 @@ Relationships:
 
 ## Stored Procedures
 #### GetMaxQuantity()
- Fetch the maximum capacity of rooms for a given room type.
  ```sql
  DELIMITER //
 
@@ -24,21 +23,61 @@ END //
 
 DELIMITER ;
 ```
+
 ```sql
 CALL GetMaxQuantity('Deluxe');
 ```
+#### ManageBooking()
 ```sql
+DELIMITER //
+
+CREATE PROCEDURE ManageBooking(IN booking_id INT, IN new_status VARCHAR(20))
+BEGIN
+    UPDATE bookings
+    SET status = new_status
+    WHERE booking_id = booking_id;
+END //
+
+DELIMITER ;
+```
+#### UpdateBooking()
+
+```sql
+DELIMITER //
+
+CREATE PROCEDURE UpdateBooking(IN booking_id INT, IN new_check_in DATE, IN new_check_out DATE)
+BEGIN
+    UPDATE bookings
+    SET check_in_date = new_check_in, check_out_date = new_check_out
+    WHERE booking_id = booking_id;
+END //
+
+DELIMITER ;
+```
+#### AddBooking()
+```sql
+DELIMITER //
+
+CREATE PROCEDURE AddBooking(IN customer_id INT, IN room_id INT, IN booking_date DATE, IN check_in DATE, IN check_out DATE)
+BEGIN
+    INSERT INTO bookings (customer_id, room_id, booking_date, check_in_date, check_out_date, status)
+    VALUES (customer_id, room_id, booking_date, check_in, check_out, 'Booked');
+END //
+
+DELIMITER ;
+```
+#### CancelBooking()
+```sql
+DELIMITER //
+
+CREATE PROCEDURE CancelBooking(IN booking_id INT)
+BEGIN
+    UPDATE bookings
+    SET status = 'Cancelled'
+    WHERE booking_id = booking_id;
+END //
+
+DELIMITER ;
 
 ```
-```sql
 
-```
-```sql
-
-```
-```sql
-
-```
-```sql
-
-```
