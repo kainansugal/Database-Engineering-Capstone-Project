@@ -24,3 +24,21 @@ END //
 
 DELIMITER ;
 ```
+```sql
+CALL GetMaxQuantity('Deluxe');
+```
+```sql
+
+```
+```sql
+
+```
+```sql
+
+```
+```sql
+
+```
+```sql
+
+```
