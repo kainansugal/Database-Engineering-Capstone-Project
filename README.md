@@ -5,5 +5,5 @@ This project implements a booking system with functionalities to manage customer
 The system's Entity-Relationship (ER) diagram illustrates the relationships between the Customers, Rooms, and Bookings tables.
 
 Relationships:
-Customers → Bookings: One-to-Many
-Rooms → Bookings: One-to-Many
+* Customers → Bookings: One-to-Many
+* Rooms → Bookings: One-to-Many
